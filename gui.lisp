@@ -18,7 +18,7 @@
     (princ filename)
     (if BW
         (rgbToGrayScale arr)
-      (changeColor arr .5 .5 .5))
+      (changeColor arr R G B))
     (JPEG:Encode-Image filename arr 3 354 630)))
 
 (defun createGUI()
