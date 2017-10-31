@@ -23,7 +23,7 @@
     (if (> 0 newRed) (setf newRed 0))
     (setf newGreen (* (aref rgbArray (+ 1 count)) g))
     (if (< 255 newGreen) (setf newGreen 255))
-    (if (> 0 newGreeb) (setf newGreen 0))
+    (if (> 0 newGreen) (setf newGreen 0))
     (setf newBlue (* (aref rgbArray (+ 0 count)) b))
     (if (< 255 newBlue) (setf newBlue 255))
     (if (> 0 newBlue) (setf newBlue 0))
