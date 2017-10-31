@@ -19,7 +19,8 @@
     (if BW
         (rgbToGrayScale arr)
       (changeColor arr R G B))
-    (JPEG:Encode-Image filename arr 3 354 630)))
+    (setf dim (multiple-value-bind (w h r) (JPEG:JPEG-FILE-DIMENSIONS path) (list w h r)))
+    (JPEG:Encode-Image filename arr (third dim) (first dim) (second dim))))
 
 (defun createGUI()
   (LTK:with-ltk ()
